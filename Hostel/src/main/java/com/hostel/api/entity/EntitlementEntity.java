@@ -1,8 +1,10 @@
 package com.hostel.api.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -12,7 +14,9 @@ public class EntitlementEntity {
 
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO )
+	@GeneratedValue(generator = "uuid")
+	@GenericGenerator(name = "uuid", strategy = "uuid2")
+	
 	private  String entitlementID;
 	
 	//private StudentEntity studentId;
@@ -38,6 +42,11 @@ public class EntitlementEntity {
 
 	public void setEntitlementID(String entitlementID) {
 		this.entitlementID = entitlementID;
+	}
+
+	public EntitlementEntity() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getRoomNo() {

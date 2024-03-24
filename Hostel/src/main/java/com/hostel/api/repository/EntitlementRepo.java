@@ -9,8 +9,8 @@ import com.hostel.api.entity.EntitlementEntity;
 
 public interface EntitlementRepo extends JpaRepository<EntitlementEntity, String> {
 
-	public List<EntitlementEntity> findAllByStudentId (int entitlementID);
-	public EntitlementEntity findByStudentId(int entitlementID);
+	public List<EntitlementEntity> findAllByEntitlementID (String entitlementID);
+	public EntitlementEntity findByEntitlementID(String entitlementID);
 	
 	
 }

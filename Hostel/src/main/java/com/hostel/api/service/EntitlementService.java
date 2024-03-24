@@ -10,15 +10,15 @@ public interface EntitlementService {
 	public List<EntitlementEntity> getAllData();
 	
 	//for searching data by id
-	public EntitlementEntity getDataById(int entitlementID);
+	public EntitlementEntity getDataById(String entitlementID);
 	
 	//for adding data 
 	public EntitlementEntity addData (EntitlementEntity entitlementEntity);
 	
 	//for updating the data 
-	public void updateData ( EntitlementEntity entitlementEntity, int  entitlementID);
+	public void updateData ( EntitlementEntity entitlementEntity, String entitlementID);
 	
 	//for deleting data
 	
-	public void deleteData (int entitlementID);
+	public void deleteData (String entitlementID);
 }
